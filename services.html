@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="mean">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QxMedia - Services</title>
+	<link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #2b2b2b;
+            height: 85px;
+        }
+        .navbar img {
+            height: 60px;
+        }
+        .tabs {
+            display: flex;
+            gap: 40px;
+        }
+        .tabs a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 300;
+        }
+        .tabs a:hover {
+            color: #9b59b6;
+        }
+        .services-container {
+            padding: 40px 90px;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .services-container.fade-in {
+            opacity: 1;
+        }
+        .service {
+            background-color: #2b2b2b;
+            margin: 20px auto;
+            border-radius: 15px;
+            display: flex;
+            width: 80%;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			margin-bottom: 40px;
+        }
+        .service-image {
+            width: 34%;
+            background-size: cover;
+            background-position: center;
+        }
+        .service-content {
+            width: 40%;
+            padding: 30px;
+            text-align: left;
+            position: relative;
+        }
+        .service-content::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0%;
+            height: 100%;
+            width: 2.5px;
+            background-color: #000;
+        }
+        .service h2 {
+            margin-top: 0;
+            color: #11111;
+            font-size: 40px;
+            font-weight: 550;
+        }
+        .service p {
+            font-size: 20px;
+            font-weight: 200;
+            margin-bottom: 30px;
+        }
+        .visit-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 400;
+            transition: background-color 0.3s;
+        }
+        .visit-button:hover {
+            background-color: #e0e0e0;
+        }
+        .visit-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        .footer a {
+            color: #fff;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="logo.png" alt="QxMedia Logo"></a>
+        <div class="tabs">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+        </div>
+    </div>
+    <div class="services-container" id="services-content">
+        <div class="service">
+            <div class="service-image" style="background-image: url('service1.svg');"></div>
+            <div class="service-content">
+                <h2>QxForward</h2>
+                <p>QxForward offers high-quality sleek email forwarding using CloudFlare for high-security.</p>
+                <a href="mbeta.qxmedia.us" class="visit-button">
+                    <img src="https://cdn-icons-png.flaticon.com/128/709/709576.png" alt="Visit icon">
+                    Visit
+                </a>
+            </div>
+        </div>
+        <div class="service">
+        <div class="service-image" style="background-image: url('service2.png');"></div>
+        <div class="service-content">
+            <h2>Qx Map Maker</h2>
+            <p>Qx Map Maker lets you create your own map for your companies locations etc for your site.</p>
+            <a href="maps.qxmedia.us" class="visit-button">
+                <img src="https://cdn-icons-png.flaticon.com/128/709/709576.png" alt="Visit icon">
+                Visit
+            </a>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="service-image" style="background-image: url('service3.png');"></div>
+        <div class="service-content">
+            <h2>Qx PDF Creator</h2>
+            <p>Qx PDF Creator is still in development.</p>
+            <a class="visit-button">
+                COMING SOON
+            </a>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="service-image" style="background-image: url('service4.png');"></div>
+        <div class="service-content">
+            <h2>GreatTab by QxMedia</h2>
+            <p>GreatTab is a chrome extension focused on providing a simplistic browser tab.</p>
+            <a href="https://chromewebstore.google.com/detail/greattab/jooihncejlccdcfhghnoiemnioccfhdc?hl=en&authuser=0" class="visit-button">
+                <img src="https://cdn-icons-png.flaticon.com/128/709/709576.png" alt="Visit icon">
+                Visit
+            </a>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="service-image" style="background-image: url('service5.png');"></div>
+        <div class="service-content">
+            <h2>Qx WIFI Speed Recommendation</h2>
+            <p>Qx Wifi Speed Recommendation makes an estimate of the speed you should look for for finding internet providers.</p>
+            <a href="wifirec.qxmedia.us" class="visit-button">
+                <img src="https://cdn-icons-png.flaticon.com/128/709/709576.png" alt="Visit icon">
+                Visit
+            </a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    QueryX Media 2024 <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a>
+</div>
+<script>
+    window.onload = function() {
+        document.getElementById('services-content').classList.add('fade-in');
+    }
+</script>
